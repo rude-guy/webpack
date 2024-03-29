@@ -4,12 +4,15 @@
   "description": "webpack学习",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:tapable": "nodemon ./tapable/Apis/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "prettier": "^3.2.5"
+  },
+  "dependencies": {
+    "tapable": "^2.2.1"
   }
 }
