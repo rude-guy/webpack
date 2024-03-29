@@ -21,6 +21,10 @@ const TAP_PROMISE = () => {
   throw new Error('tapPromise is not supported on a SyncHook');
 };
 
+/**
+ * 为什么使用动态编译？
+ * https://github.com/webpack/tapable/issues/162#issuecomment-1980153775
+ * */
 const COMPILE = function (options) {
   // 将注册的函数复制给 hooks._x 属性
   factory.setup(this, options);
