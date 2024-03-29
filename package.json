@@ -6,7 +6,7 @@
   "type": "commonjs",
   "scripts": {
     "dev:tapable": "nodemon ./tapable/Apis/index.js",
-    "dev:babel": "nodemon ./babel/index.js",
+    "dev:babel": "nodemon ./babel/tree-shaking/index.js",
     "test": "jest"
   },
   "keywords": [],
