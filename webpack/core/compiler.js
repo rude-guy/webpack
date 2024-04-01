@@ -52,6 +52,7 @@ class Compiler {
       this.entries.add(entryObj);
     });
     console.log(this.entries, 'entry');
+    console.log(this.modules, 'modules');
   }
 
   // 编译模块方法
@@ -104,8 +105,19 @@ class Compiler {
           node.callee = t.identifier('__webpack_require__');
           // 修改源代码中require语句引入的模块，全部修改为相对于路径来处理
           node.arguments = [t.stringLiteral(moduleId)];
-          // 为当前模块添加require语句造成的依赖（内容相当于根路径模块ID）
-          module.dependencies.add(moduleId);
+          // 转化为ids到数组
+          const alreadyModules = Array.from(this.modules).map((i) => i.id);
+          if (!alreadyModules.includes(moduleId)) {
+            // 为当前模块添加require语句造成的依赖（内容相当于根路径模块ID）
+            module.dependencies.add(moduleId);
+          } else {
+            // 已经存在的话。虽然不进行添加进入模块的编译，但是仍要更新这个模块依赖入口
+            this.modules.forEach((value) => {
+              if (value.id === moduleId) {
+                value.name.push(moduleName);
+              }
+            });
+          }
         }
       },
     });
@@ -113,6 +125,12 @@ class Compiler {
     const { code } = generator(ast);
     // 为当前模块挂载新的生成的代码
     module._source = code;
+    // 递归依赖深度遍历 存在依赖模块则加入
+    module.dependencies.forEach((dependency) => {
+      const depModule = this.buildModule(moduleName, dependency);
+      // 将遍历后的任何依赖模块对象加入到modules对象中去
+      this.modules.add(depModule);
+    });
     // 返回当前模块对象
     return module;
   }
