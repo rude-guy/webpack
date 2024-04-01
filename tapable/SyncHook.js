@@ -1,3 +1,4 @@
+// @ts-ignore
 const Hook = require('./Hook');
 
 const HookCodeFactory = require('./HookCodeFactory');
