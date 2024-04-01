@@ -5,7 +5,7 @@ const parser = require('@babel/parser');
 const traverse = require('@babel/traverse').default;
 const generator = require('@babel/generator').default;
 const t = require('@babel/types');
-const { toUnixPath, tryExtensions } = require('./utils');
+const { toUnixPath, tryExtensions, getSourceCode } = require('./utils');
 
 // Compiler类进行核心编译实现
 class Compiler {
@@ -29,9 +29,9 @@ class Compiler {
     // 所有的代码块对象
     this.chunks = new Set();
     // 存放本次产出的文件对象
-    this.assets = new Set();
+    this.assets = {};
     // 存放本次编译所有产出的文件名
-    this.files = new Set();
+    this.files = [];
   }
 
   // run方法启动编译
@@ -43,6 +43,46 @@ class Compiler {
     const entry = this.getEntry();
     // 编译入口文件
     this.buildEntryModule(entry);
+    // 导出列表，之后将每个chunk转化称为单独的文件加入到输出列表assets中
+    this.exportFile(callback);
+  }
+
+  // 将chunk加入输出列表中去
+  exportFile(callback) {
+    const output = this.options.output;
+    // 根据chunk生成assets内容
+    this.chunks.forEach((chunk) => {
+      const parseFileName = output.filename.replace('[name]', chunk.name);
+      // assets中 {'main.js': '生成的字符串代码....'}
+      this.assets[parseFileName] = getSourceCode(chunk);
+    });
+    // 调用plugin emit钩子
+    this.hooks.emit.call();
+    // 先判断目录是否存在 存在直接fs.write 不存在则首先创建
+    if (!fs.existsSync(output.path)) {
+      fs.mkdirSync(output.path);
+    }
+
+    // files中保存所有的生成文件名
+    this.files = Object.keys(this.assets);
+    // 将assets中的内容生成打包文件 写入文件系统中
+    Object.keys(this.assets).forEach((fileName) => {
+      const filePath = path.join(output.path, fileName);
+      fs.writeFileSync(filePath, this.assets[fileName]);
+    });
+    // 结束后触发钩子
+    this.hooks.done.call();
+    callback(null, {
+      toJson: () => {
+        return {
+          entries: this.entries,
+          modules: this.modules,
+          files: this.files,
+          chunks: this.chunks,
+          assets: this.assets,
+        };
+      },
+    });
   }
 
   buildEntryModule(entry) {

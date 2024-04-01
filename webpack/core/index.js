@@ -1,4 +1,5 @@
 const webpack = require('./webpack');
+// const webpack = require('webpack');
 const config = require('../example/webpack.config');
 // 2. 调用webpack(options)初始化compiler对象
 const compiler = webpack(config);

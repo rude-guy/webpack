@@ -23,7 +23,8 @@
     "babel-jest": "^29.7.0",
     "jest": "^29.7.0",
     "nodemon": "^3.1.0",
-    "prettier": "^3.2.5"
+    "prettier": "^3.2.5",
+    "webpack": "^5.91.0"
   },
   "dependencies": {
     "tapable": "^2.2.1"
