@@ -48,11 +48,26 @@ class Compiler {
   buildEntryModule(entry) {
     Object.keys(entry).forEach((entryName) => {
       const entryPath = entry[entryName];
+      // 模版编译逻辑
       const entryObj = this.buildModule(entryName, entryPath);
       this.entries.add(entryObj);
+      // 根据当前的入口文件和模块相互依赖关系，组装包含当前入口所有依赖模块的chunk
+      this.buildUpChunk(entryName, entryObj);
     });
     console.log(this.entries, 'entry');
     console.log(this.modules, 'modules');
+    console.log(this.chunks, 'chunks');
+  }
+
+  // 根据入口和依赖模块组装chunks
+  buildUpChunk(entryName, entryObj) {
+    const chunk = {
+      name: entryName, // 每一个文件作为一个chunk
+      entryModule: entryObj, // 入口模块
+      modules: Array.from(this.modules).filter((i) => i.name.includes(entryName)), // 寻找与当前entry相关的所有module
+    };
+    // 将chunk添加到this.chunks中去
+    this.chunks.add(chunk);
   }
 
   // 编译模块方法
