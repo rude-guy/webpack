@@ -37,6 +37,9 @@ devDependencies:
   jest:
     specifier: ^29.7.0
     version: 29.7.0
+  loader-runner:
+    specifier: ^4.3.0
+    version: 4.3.0
   nodemon:
     specifier: ^3.1.0
     version: 3.1.0
