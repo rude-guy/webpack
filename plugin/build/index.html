@@ -1,0 +1,253 @@
+Html Webpack Plugin:
+<pre>
+  Error: Child compilation failed:
+  Module build failed (from ./node_modules/.pnpm/babel-loader@9.1.3_@babel+core@7.24.3_webpack@5.91.0/node_modul  es/babel-loader/lib/index.js):
+  SyntaxError: /Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/html-webpack-plugin@5.6.  0_webpack@5.91.0/node_modules/html-webpack-plugin/default_index.ejs: Unexpected token (1:0)
+  
+  > 1 | <!DOCTYPE html>
+      | ^
+    2 | <html><head><meta name="viewport" content="width=device-width, initial-scale=1"><script defer src="main.js"></script></head>
+    3 |   <head>
+    4 |     <meta charset="utf-8">
+      at constructor (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+parser@7.2  4.1/node_modules/@babel/parser/lib/index.js:353:19)
+      at Parser.raise (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+parser@7.  24.1/node_modules/@babel/parser/lib/index.js:3277:19)
+      at Parser.unexpected (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+pars  er@7.24.1/node_modules/@babel/parser/lib/index.js:3297:16)
+      at Parser.parseExprAtom (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+p  arser@7.24.1/node_modules/@babel/parser/lib/index.js:10937:18)
+      at Parser.parseExprSubscripts (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@b  abel+parser@7.24.1/node_modules/@babel/parser/lib/index.js:10590:23)
+      at Parser.parseUpdate (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+par  ser@7.24.1/node_modules/@babel/parser/lib/index.js:10573:21)
+      at Parser.parseMaybeUnary (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel  +parser@7.24.1/node_modules/@babel/parser/lib/index.js:10551:23)
+      at Parser.parseMaybeUnaryOrPrivate (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pn  pm/@babel+parser@7.24.1/node_modules/@babel/parser/lib/index.js:10405:61)
+      at Parser.parseExprOps (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+pa  rser@7.24.1/node_modules/@babel/parser/lib/index.js:10410:23)
+      at Parser.parseMaybeConditional (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/  @babel+parser@7.24.1/node_modules/@babel/parser/lib/index.js:10387:23)
+      at Parser.parseMaybeAssign (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babe  l+parser@7.24.1/node_modules/@babel/parser/lib/index.js:10348:21)
+      at Parser.parseExpressionBase (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@b  abel+parser@7.24.1/node_modules/@babel/parser/lib/index.js:10302:23)
+      at /Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+parser@7.24.1/node_modu  les/@babel/parser/lib/index.js:10298:39
+      at Parser.allowInAnd (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+pars  er@7.24.1/node_modules/@babel/parser/lib/index.js:11931:16)
+      at Parser.parseExpression (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel  +parser@7.24.1/node_modules/@babel/parser/lib/index.js:10298:17)
+      at Parser.parseStatementContent (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/  @babel+parser@7.24.1/node_modules/@babel/parser/lib/index.js:12372:23)
+      at Parser.parseStatementLike (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@ba  bel+parser@7.24.1/node_modules/@babel/parser/lib/index.js:12239:17)
+      at Parser.parseModuleItem (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel  +parser@7.24.1/node_modules/@babel/parser/lib/index.js:12216:17)
+      at Parser.parseBlockOrModuleBlockBody (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/  .pnpm/@babel+parser@7.24.1/node_modules/@babel/parser/lib/index.js:12796:36)
+      at Parser.parseBlockBody (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+  parser@7.24.1/node_modules/@babel/parser/lib/index.js:12789:10)
+      at Parser.parseProgram (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+pa  rser@7.24.1/node_modules/@babel/parser/lib/index.js:12116:10)
+      at Parser.parseTopLevel (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+p  arser@7.24.1/node_modules/@babel/parser/lib/index.js:12106:25)
+      at Parser.parse (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+parser@7.  24.1/node_modules/@babel/parser/lib/index.js:13905:10)
+      at parse (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+parser@7.24.1/no  de_modules/@babel/parser/lib/index.js:13947:38)
+      at parser (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+core@7.24.3/nod  e_modules/@babel/core/lib/parser/index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+core@7.2  4.3/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+core@7.24.3/node_m  odules/@babel/core/lib/transformation/index.js:21:50)
+      at run.next (<anonymous>)
+      at transform (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+core@7.24.3/  node_modules/@babel/core/lib/transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/gensync@1.0.0-beta.2/nod  e_modules/gensync/index.js:261:32)
+      at /Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modu  les/gensync/index.js:273:13
+      at async.call.result.err.err (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/gen  sync@1.0.0-beta.2/node_modules/gensync/index.js:223:11)
+      at /Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modu  les/gensync/index.js:189:28
+      at /Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+core@7.24.3/node_module  s/@babel/core/lib/gensync-utils/async.js:67:7
+      at /Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modu  les/gensync/index.js:113:33
+      at step (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/gensync@1.0.0-beta.2/nod  e_modules/gensync/index.js:287:14)
+      at /Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modu  les/gensync/index.js:273:13
+      at async.call.result.err.err (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/gen  sync@1.0.0-beta.2/node_modules/gensync/index.js:223:11)
+      at /Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modu  les/gensync/index.js:37:40
+  ModuleBuildError: Module build failed (from ./node_modules/.pnpm/babel-loader@9.1.3_@babel+core@7.24.3_webpack  @5.91.0/node_modules/babel-loader/lib/index.js):
+  SyntaxError: /Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/html-webpack-plugin@5.6.  0_webpack@5.91.0/node_modules/html-webpack-plugin/default_index.ejs: Unexpected token (1:0)
+  
+  > 1 | <!DOCTYPE html>
+      | ^
+    2 | <html>
+    3 |   <head>
+    4 |     <meta charset="utf-8">
+      at constructor (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+parser@7.2  4.1/node_modules/@babel/parser/lib/index.js:353:19)
+      at Parser.raise (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+parser@7.  24.1/node_modules/@babel/parser/lib/index.js:3277:19)
+      at Parser.unexpected (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+pars  er@7.24.1/node_modules/@babel/parser/lib/index.js:3297:16)
+      at Parser.parseExprAtom (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+p  arser@7.24.1/node_modules/@babel/parser/lib/index.js:10937:18)
+      at Parser.parseExprSubscripts (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@b  abel+parser@7.24.1/node_modules/@babel/parser/lib/index.js:10590:23)
+      at Parser.parseUpdate (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+par  ser@7.24.1/node_modules/@babel/parser/lib/index.js:10573:21)
+      at Parser.parseMaybeUnary (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel  +parser@7.24.1/node_modules/@babel/parser/lib/index.js:10551:23)
+      at Parser.parseMaybeUnaryOrPrivate (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pn  pm/@babel+parser@7.24.1/node_modules/@babel/parser/lib/index.js:10405:61)
+      at Parser.parseExprOps (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+pa  rser@7.24.1/node_modules/@babel/parser/lib/index.js:10410:23)
+      at Parser.parseMaybeConditional (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/  @babel+parser@7.24.1/node_modules/@babel/parser/lib/index.js:10387:23)
+      at Parser.parseMaybeAssign (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babe  l+parser@7.24.1/node_modules/@babel/parser/lib/index.js:10348:21)
+      at Parser.parseExpressionBase (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@b  abel+parser@7.24.1/node_modules/@babel/parser/lib/index.js:10302:23)
+      at /Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+parser@7.24.1/node_modu  les/@babel/parser/lib/index.js:10298:39
+      at Parser.allowInAnd (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+pars  er@7.24.1/node_modules/@babel/parser/lib/index.js:11931:16)
+      at Parser.parseExpression (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel  +parser@7.24.1/node_modules/@babel/parser/lib/index.js:10298:17)
+      at Parser.parseStatementContent (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/  @babel+parser@7.24.1/node_modules/@babel/parser/lib/index.js:12372:23)
+      at Parser.parseStatementLike (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@ba  bel+parser@7.24.1/node_modules/@babel/parser/lib/index.js:12239:17)
+      at Parser.parseModuleItem (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel  +parser@7.24.1/node_modules/@babel/parser/lib/index.js:12216:17)
+      at Parser.parseBlockOrModuleBlockBody (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/  .pnpm/@babel+parser@7.24.1/node_modules/@babel/parser/lib/index.js:12796:36)
+      at Parser.parseBlockBody (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+  parser@7.24.1/node_modules/@babel/parser/lib/index.js:12789:10)
+      at Parser.parseProgram (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+pa  rser@7.24.1/node_modules/@babel/parser/lib/index.js:12116:10)
+      at Parser.parseTopLevel (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+p  arser@7.24.1/node_modules/@babel/parser/lib/index.js:12106:25)
+      at Parser.parse (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+parser@7.  24.1/node_modules/@babel/parser/lib/index.js:13905:10)
+      at parse (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+parser@7.24.1/no  de_modules/@babel/parser/lib/index.js:13947:38)
+      at parser (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+core@7.24.3/nod  e_modules/@babel/core/lib/parser/index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+core@7.2  4.3/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+core@7.24.3/node_m  odules/@babel/core/lib/transformation/index.js:21:50)
+      at run.next (<anonymous>)
+      at transform (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+core@7.24.3/  node_modules/@babel/core/lib/transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/gensync@1.0.0-beta.2/nod  e_modules/gensync/index.js:261:32)
+      at /Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modu  les/gensync/index.js:273:13
+      at async.call.result.err.err (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/gen  sync@1.0.0-beta.2/node_modules/gensync/index.js:223:11)
+      at /Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modu  les/gensync/index.js:189:28
+      at /Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/@babel+core@7.24.3/node_module  s/@babel/core/lib/gensync-utils/async.js:67:7
+      at /Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modu  les/gensync/index.js:113:33
+      at step (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/gensync@1.0.0-beta.2/nod  e_modules/gensync/index.js:287:14)
+      at /Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modu  les/gensync/index.js:273:13
+      at async.call.result.err.err (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/gen  sync@1.0.0-beta.2/node_modules/gensync/index.js:223:11)
+      at /Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modu  les/gensync/index.js:37:40
+      at processResult (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/webpack@5.91.0_  webpack-cli@5.1.4/node_modules/webpack/lib/NormalModule.js:841:19)
+      at /Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/webpack@5.91.0_webpack-cli@5.1  .4/node_modules/webpack/lib/NormalModule.js:966:5
+      at /Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/loader-runner@4.3.0/node_modul  es/loader-runner/lib/LoaderRunner.js:400:11
+      at /Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/loader-runner@4.3.0/node_modul  es/loader-runner/lib/LoaderRunner.js:252:18
+      at context.callback (/Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/loader-runne  r@4.3.0/node_modules/loader-runner/lib/LoaderRunner.js:124:13)
+      at /Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/babel-loader@9.1.3_@babel+core  @7.24.3_webpack@5.91.0/node_modules/babel-loader/lib/index.js:39:103
+  
+  - index.js:353 constructor
+    [webpack-learn]/[@babel+parser@7.24.1]/[@babel]/parser/lib/index.js:353:19
+  
+  - index.js:3277 Parser.raise
+    [webpack-learn]/[@babel+parser@7.24.1]/[@babel]/parser/lib/index.js:3277:19
+  
+  - index.js:3297 Parser.unexpected
+    [webpack-learn]/[@babel+parser@7.24.1]/[@babel]/parser/lib/index.js:3297:16
+  
+  - index.js:10937 Parser.parseExprAtom
+    [webpack-learn]/[@babel+parser@7.24.1]/[@babel]/parser/lib/index.js:10937:18
+  
+  - index.js:10590 Parser.parseExprSubscripts
+    [webpack-learn]/[@babel+parser@7.24.1]/[@babel]/parser/lib/index.js:10590:23
+  
+  - index.js:10573 Parser.parseUpdate
+    [webpack-learn]/[@babel+parser@7.24.1]/[@babel]/parser/lib/index.js:10573:21
+  
+  - index.js:10551 Parser.parseMaybeUnary
+    [webpack-learn]/[@babel+parser@7.24.1]/[@babel]/parser/lib/index.js:10551:23
+  
+  - index.js:10405 Parser.parseMaybeUnaryOrPrivate
+    [webpack-learn]/[@babel+parser@7.24.1]/[@babel]/parser/lib/index.js:10405:61
+  
+  - index.js:10410 Parser.parseExprOps
+    [webpack-learn]/[@babel+parser@7.24.1]/[@babel]/parser/lib/index.js:10410:23
+  
+  - index.js:10387 Parser.parseMaybeConditional
+    [webpack-learn]/[@babel+parser@7.24.1]/[@babel]/parser/lib/index.js:10387:23
+  
+  - index.js:10348 Parser.parseMaybeAssign
+    [webpack-learn]/[@babel+parser@7.24.1]/[@babel]/parser/lib/index.js:10348:21
+  
+  - index.js:10302 Parser.parseExpressionBase
+    [webpack-learn]/[@babel+parser@7.24.1]/[@babel]/parser/lib/index.js:10302:23
+  
+  - index.js:10298 
+    [webpack-learn]/[@babel+parser@7.24.1]/[@babel]/parser/lib/index.js:10298:39
+  
+  - index.js:11931 Parser.allowInAnd
+    [webpack-learn]/[@babel+parser@7.24.1]/[@babel]/parser/lib/index.js:11931:16
+  
+  - index.js:10298 Parser.parseExpression
+    [webpack-learn]/[@babel+parser@7.24.1]/[@babel]/parser/lib/index.js:10298:17
+  
+  - index.js:12372 Parser.parseStatementContent
+    [webpack-learn]/[@babel+parser@7.24.1]/[@babel]/parser/lib/index.js:12372:23
+  
+  - index.js:12239 Parser.parseStatementLike
+    [webpack-learn]/[@babel+parser@7.24.1]/[@babel]/parser/lib/index.js:12239:17
+  
+  - index.js:12216 Parser.parseModuleItem
+    [webpack-learn]/[@babel+parser@7.24.1]/[@babel]/parser/lib/index.js:12216:17
+  
+  - index.js:12796 Parser.parseBlockOrModuleBlockBody
+    [webpack-learn]/[@babel+parser@7.24.1]/[@babel]/parser/lib/index.js:12796:36
+  
+  - index.js:12789 Parser.parseBlockBody
+    [webpack-learn]/[@babel+parser@7.24.1]/[@babel]/parser/lib/index.js:12789:10
+  
+  - index.js:12116 Parser.parseProgram
+    [webpack-learn]/[@babel+parser@7.24.1]/[@babel]/parser/lib/index.js:12116:10
+  
+  - index.js:12106 Parser.parseTopLevel
+    [webpack-learn]/[@babel+parser@7.24.1]/[@babel]/parser/lib/index.js:12106:25
+  
+  - index.js:13905 Parser.parse
+    [webpack-learn]/[@babel+parser@7.24.1]/[@babel]/parser/lib/index.js:13905:10
+  
+  - index.js:13947 parse
+    [webpack-learn]/[@babel+parser@7.24.1]/[@babel]/parser/lib/index.js:13947:38
+  
+  - index.js:41 parser
+    [webpack-learn]/[@babel+core@7.24.3]/[@babel]/core/lib/parser/index.js:41:34
+  
+  - parser.next
+  
+  - normalize-file.js:64 normalizeFile
+    [webpack-learn]/[@babel+core@7.24.3]/[@babel]/core/lib/transformation/normalize-file.js:64:37
+  
+  - normalizeFile.next
+  
+  - index.js:21 run
+    [webpack-learn]/[@babel+core@7.24.3]/[@babel]/core/lib/transformation/index.js:21:50
+  
+  - run.next
+  
+  - transform.js:22 transform
+    [webpack-learn]/[@babel+core@7.24.3]/[@babel]/core/lib/transform.js:22:33
+  
+  - transform.next
+  
+  - index.js:261 step
+    [webpack-learn]/[gensync@1.0.0-beta.2]/[gensync]/index.js:261:32
+  
+  - index.js:273 
+    [webpack-learn]/[gensync@1.0.0-beta.2]/[gensync]/index.js:273:13
+  
+  - index.js:223 async.call.result.err.err
+    [webpack-learn]/[gensync@1.0.0-beta.2]/[gensync]/index.js:223:11
+  
+  - index.js:189 
+    [webpack-learn]/[gensync@1.0.0-beta.2]/[gensync]/index.js:189:28
+  
+  - async.js:67 
+    [webpack-learn]/[@babel+core@7.24.3]/[@babel]/core/lib/gensync-utils/async.js:67:7
+  
+  - index.js:113 
+    [webpack-learn]/[gensync@1.0.0-beta.2]/[gensync]/index.js:113:33
+  
+  - index.js:287 step
+    [webpack-learn]/[gensync@1.0.0-beta.2]/[gensync]/index.js:287:14
+  
+  - index.js:273 
+    [webpack-learn]/[gensync@1.0.0-beta.2]/[gensync]/index.js:273:13
+  
+  - index.js:223 async.call.result.err.err
+    [webpack-learn]/[gensync@1.0.0-beta.2]/[gensync]/index.js:223:11
+  
+  - index.js:37 
+    [webpack-learn]/[gensync@1.0.0-beta.2]/[gensync]/index.js:37:40
+  
+  - ModuleBuildError: Module build failed (from ./node_modules/.pnpm/babel-loader@9.1.3_@babel+core@7.24.3_webpa    ck@5.91.0/node_modules/babel-loader/lib/index.js):
+  
+  - SyntaxError: /Users/guyrude/Desktop/workshop/webpack/webpack-learn/node_modules/.pnpm/html-webpack-plugin@5.    6.0_webpack@5.91.0/node_modules/html-webpack-plugin/default_index.ejs: Unexpected token (1:0)
+  
+  - > 1 | <!DOCTYPE html>
+  
+  -    | ^
+  
+  -  2 | <html>
+  
+  -  3 |   <head>
+  
+  -  4 |     <meta charset="utf-8">
+  
+  - index.js:353 constructor
+    [webpack-learn]/[@babel+parser@7.24.1]/[@babel]/parser/lib/index.js:353:19
+  
+  - index.js:3277 Parser.raise
+    [webpack-learn]/[@babel+parser@7.24.1]/[@babel]/parser/lib/index.js:3277:19
+  
+</pre>
